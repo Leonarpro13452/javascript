@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font: normal 20px arial;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+        input{
+            margin: 10px 2px;
+        }
+        div#res{
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma</h1>
+    <input type="number" name="txn1" id="txn1"><br>
+    <input type="number" name="txn2" id="txn2"><br>
+    <input type="button" value="RESULTADO" onclick="soma()">
+    <div id="res">Resultado</div>
+    <script>
+        function soma() {
+        var n1 = window.document.getElementById('txn1')
+        var n2 = window.document.querySelector('input#txn2')
+        var res =window.document.getElementById('res')
+        var n1 = Number(n1.value)
+        var n2 = Number(n2.value)
+        var s = n1+n2
+        res.innerHTML = `A soma de ${n1} mais ${n2}, é ${s}`
+        }
+    </script> 
+</body>
+</html>
