@@ -9,6 +9,7 @@ main{
     width: 500px;
     background-color: white;
     margin: auto;
+    align-items: center;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);
@@ -18,4 +19,7 @@ footer{
     text-align: center;
     margin-top: 20px;
     font: 1.3em sans-serif;
+}
+div#res{
+    text-align: center;
 }

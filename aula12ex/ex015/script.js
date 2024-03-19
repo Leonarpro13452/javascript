@@ -9,12 +9,33 @@ function verificar() {
         var sex = document.getElementsByName('radsex')
         var idade = ano_atual - Number(ano_nascimento.value)
         var gênero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id','foto')
         if (sex[0].checked) {
             gênero = 'Homem'
+            if (idade < 13) {
+                img.setAttribute('src','fotos/bebe-m.png')
+            } else if (idade < 29) {
+                img.setAttribute('src','fotos/jovem-m.png')
+            } else if (idade < 65) {
+                img.setAttribute('src','fotos/adulto-m.png')
+            } else {
+                img.setAttribute('src','fotos/idoso.png')
+            }
         } else {
             gênero = 'Mulher'
+            if (idade < 13) {
+                img.setAttribute('src','fotos/bebe-f.png')
+            } else if (idade < 29) {
+                img.setAttribute('src','fotos/jovem-f.png')
+            } else if (idade < 65) {
+                img.setAttribute('src','fotos/adulto-f.png')
+            } else {
+                img.setAttribute('src','fotos/idosa.png')
+            }
         }
         res.style.textalign = 'center'
-        res.innerHTML = ` Você é ${gênero}`
+        res.innerHTML = `Detectamos ${gênero} com ${idade} anos <br>`
+        res.appendChild(img)
     }
 }
